@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>New Live</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <section class="popup-mailing">
+      <div class="popup-mailing__inner">
+        <button class="popup-mailing__button-close">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <h2 class="popup-mailing__title">Письма от проекта «Новая жизнь»</h2>
+        <p class="popup-mailing__discription">Мы&nbsp;хотим стать ближе к&nbsp;вам. Подпишитесь на&nbsp;нашу рассылку, и&nbsp;мы будем отправлять вам один раз в&nbsp;две недели письмо только с&nbsp;самой интересной и&nbsp;полезной информацией.</p>
+        <form class="popup-mailing__form" action="#" method="post">
+          <input class="popup-mailing__email error-mail" type="email" name="email" placeholder="ваш e-mail">
+          <span class="error-mail__text">Проверьте, пожалуйста, адрес</span>
+          <button class="popup-mailing__button" type="submit">подписаться</button>
+        </form>
+      </div>
+
+      <div class="popup-mailing__inner hidden">
+        <button class="popup-mailing__button-close">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <p class="popup-mailing__title">Спасибо!</p>
+        <p class="popup-mailing__discription">Мы уже готовим следующую полезную рассылку для вас !</p>
+      </div>
+    </section>
+
+    <script src="js/popup-mailing.js"></script>
+  </body>
+</html>
