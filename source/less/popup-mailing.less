@@ -9,7 +9,9 @@
   background-color: rgba(0, 0, 0, 0.8);
 
   text-align: center;
-
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
   color: #1b2733;
 
   z-index: 10;
@@ -134,9 +136,16 @@
   background-color: #1b2733;
 }
 
+.popup-mailing__title--transform {
+  text-transform: uppercase;
+  margin-top: 37px;
+  margin-bottom: 29px;
+}
+
 @media (max-width: 375px) {
   .popup-mailing__inner {
     width: 351px;
+    min-height: 601px;
     padding-left: 18px;
     padding-right: 18px;
   }
@@ -168,5 +177,10 @@
 
   .popup-mailing__discription {
     margin-bottom: 34px;
+  }
+
+  .popup-mailing__title--transform {
+    margin-top: 60px;
+    margin-bottom: 26px;
   }
 }
