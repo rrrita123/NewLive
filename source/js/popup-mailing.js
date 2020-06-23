@@ -1,9 +1,9 @@
 'use strict';
 
+document.querySelector('.popup-mailing__email').classList.remove('error-mail');
+
 var SCROLL_LIMIT = 40;
 var countScroll = 0;
-
-document.querySelector('.popup-mailing__email').classList.remove('error-mail');
 
 function setCookie(name, value, options = {}) {
 
@@ -66,7 +66,7 @@ function showPopup() {
 
 function windowScrollHandler(evt) {
   countScroll++;
-  if (countScroll > scrollLimit) {
+  if (countScroll > SCROLL_LIMIT) {
     showPopup();
   }
 }
