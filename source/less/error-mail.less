@@ -7,11 +7,21 @@
 }
 
 .error-mail__text {
-  display: none;
   position: absolute;
   bottom: 25px;
   left: 110px;
 
   font-size: 12px;
   color: #e11f26;
+  display: none;
+}
+
+.error-mail + .error-mail__text {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .error-mail + .error-mail__text {
+    display: none;
+  }
 }

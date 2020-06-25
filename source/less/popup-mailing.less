@@ -31,7 +31,13 @@
   background-color: #ffffff;
 
   &::before {
-    content: url("../img/letter.svg");
+    content: "";
+    width: 214px;
+    height: 214px;
+    background-image: url("../img/letter_2x.png");
+    display: block;
+    background-size: cover;
+    margin: 0 auto;
   }
 }
 
@@ -142,7 +148,7 @@
   margin-bottom: 29px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .popup-mailing__inner {
     width: 351px;
     min-height: 601px;
