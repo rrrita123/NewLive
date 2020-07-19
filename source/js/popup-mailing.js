@@ -42,10 +42,11 @@ function deleteCookie(name) {
   })
 }
 
-function clickButtonClose(popupElement) {
+function closePopup(popupElement) {
   var buttonClose = popupElement.querySelector('.popup-mailing__button-close');
+  var popupForm = popupElement.querySelector('.popup-mailing__form');
 
-  function buttonCloseClickHandler() {
+  function hidePopup() {
     setCookie('subscribe', 'disabled');
     popupElement.classList.add('hidden');
 
@@ -53,23 +54,39 @@ function clickButtonClose(popupElement) {
     buttonClose.removeEventListener('click', buttonCloseClickHandler);
   }
 
+  function buttonCloseClickHandler() {
+    hidePopup();
+  }
+
+  function documentKeydownEscHandler(evt) {
+    if (evt.keyCode === 27) {
+      hidePopup();
+    }
+  }
+
+  function popupFormSubmitHandler() {
+    setCookie('subscribe', 'disabled');
+  };
+
   buttonClose.addEventListener('click', buttonCloseClickHandler);
+  document.addEventListener('keydown', documentKeydownEscHandler);
+  popupForm.addEventListener('submit', popupFormSubmitHandler);
 };
 
 function showPopup() {
   var popupElement = document.querySelector('.popup-mailing');
   if (popupElement.classList.contains('hidden')) {
     popupElement.classList.remove('hidden');
-    clickButtonClose(popupElement);
+    closePopup(popupElement);
   }
-}
+};
 
 function windowScrollHandler(evt) {
   countScroll++;
   if (countScroll > SCROLL_LIMIT) {
     showPopup();
   }
-}
+};
 
 function initPopup() {
   if (!getCookie('subscribe')) {
@@ -77,15 +94,15 @@ function initPopup() {
   }
   if (getCookie('subscribe') === 'show') {
     setTimeout(function() {
-      window.addEventListener('scroll', windowScrollHandler);
-    }, 3000);
+      window.addEventListener('scroll', windowScrollHandler, {passive: true});
+    }, 8000);
 
     setTimeout(function() {
       console.log(countScroll);
       if (countScroll === 0) {
         setTimeout(showPopup, 1000);
       }
-    }, 5000);
+    }, 10000);
   }
 };
 
