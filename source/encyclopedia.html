@@ -28,7 +28,7 @@
             <p class="banner__title banner__title--encyclopedia">Собираем в&nbsp;одном месте международную терминологию в&nbsp;сфере знаний об&nbsp;онкологии на&nbsp;русском языке</p>
             <p class="banner__text banner__text--encyclopedia">Не нашли в списке тот термин, о котором хотели бы узнать больше?</p>
           </div>
-          <button class="button-main button-main--banner-encyclopedia" type="button">напишите нам</button>
+          <a href="#" class="button-main button-main--banner-encyclopedia">напишите нам</a>
           <picture class="banner__img banner__img--encyclopedia">
             <source media="(min-width: 768px)" srcset="img/banner-encyclopedia_1x.png 1x, img/banner-encyclopedia_2x.png 2x">
             <img class="banner-encyclopedia__img banner-encyclopedia__img--main" src="img/banner-encyclopedia-mobile_1x.png" srcset="img/banner-encyclopedia-mobile_2x.png 2x" alt="Энциклопедия онкологии">
@@ -39,7 +39,7 @@
 
     <section class="terminology">
       <h2 class="visually-hidden">Онкологические термины</h2>
-      <div class="container">
+      <div class="container terminology__wrapper">
         <a class="terminology__link" href="#">
           <div class="terminology__item">
             <h2 class="terminology__title">Онкология</h2>
@@ -77,7 +77,7 @@
 
         <a class="terminology__link" href="#">
           <div class="terminology__item">
-            <h2 class="terminology__title">2Онкомаркер her</h2>
+            <h2 class="terminology__title">Онкомаркер her</h2>
             <p class="terminology__description">Что означает показатель her 2 или 3 при раке молочной железы у женщин</p>
           </div>
         </a>
@@ -102,15 +102,17 @@
             <p class="terminology__description">Гормонозависимость опухоли – что означает и как лечить</p>
           </div>
         </a>
+
+        <button class="button-main button-main--terminology" type="button">показать еше</button>
       </div>
     </section>
 
     <section class="contents">
       <h2 class="visually-hidden">Навигация по терминам</h2>
       <ul class="contents__list">
-        <li class="contents__item"><a href="">всё</a></li>
-        <li class="contents__item"><a href="">а</a></li>
-        <li class="contents__item"><a href="">б</a></li>
+        <li class="contents__item"><a href="#ВСЁ">всё</a></li>
+        <li class="contents__item"><a class="active" href="#A">а</a></li>
+        <li class="contents__item"><a class="disabled" href="#Б">б</a></li>
         <li class="contents__item"><a href="">в</a></li>
         <li class="contents__item"><a href="">г</a></li>
         <li class="contents__item"><a href="">д</a></li>
@@ -136,7 +138,7 @@
         <li class="contents__item"><a href="">э</a></li>
         <li class="contents__item"><a href="">ю</a></li>
         <li class="contents__item"><a href="">я</a></li>
-        <li class="contents__item"><a href="">123</a></li>
+        <li class="contents__item"><a href="#123">123</a></li>
       </ul>
 
     </section>

@@ -4,14 +4,17 @@
 }
 
 .terminology__title {
+  margin-bottom: 2px;
+  margin-top: 39px;
+
   font-weight: normal;
   font-size: 24px;
   line-height: 36px;
 }
 
 .terminology__description {
-  margin-top: 10px;
-  margin-bottom: 32px;
+  margin-top: 0;
+  margin-bottom: 48px;
 
   font-weight: normal;
   font-size: 18px;
@@ -19,15 +22,47 @@
 }
 
 .terminology__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 18px 30px;
+  min-height: 200px;
+  padding: 0 30px;
   margin-bottom: 30px;
 
   background: #ffffff;
   border: 1px solid rgba(150, 150, 150, 0.2);
   box-sizing: border-box;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
 
+.terminology__item::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #5080ec;
+}
+
+.terminology__link:hover .terminology__item::after {
+  background-color: #ff7e33;
+}
+
+@media (min-width: 768px) {
+  .terminology__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .terminology__item {
+    width: 380px;
+    min-height: 230px;
+    margin-right: 40px;
+  }
+
+  .terminology__wrapper .terminology__link:nth-child(3n+3) .terminology__item {
+    margin-right: 0;
+  }
 }
