@@ -99,3 +99,12 @@ if (window.innerWidth < Mob.WIDTH) {
 } else {
   btnMoreTerminology.classList.add('hidden');
 }
+
+window.addEventListener('scroll', function(evt) {
+  // console.log(window.scrollY);
+  if (window.scrollY > 750) {
+    contentsElement.classList.add('fixed');
+  } else {
+    contentsElement.classList.remove('fixed');
+  }
+});
