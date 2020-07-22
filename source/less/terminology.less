@@ -57,12 +57,38 @@
   }
 
   .terminology__item {
+    width: 364px;
+    min-height: 230px;
+    margin-right: 40px;
+  }
+
+  .terminology__wrapper .terminology__link:nth-child(2n+2) .terminology__item {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1220px) {
+  .terminology__wrapper .terminology__link:nth-child(2n+2) .terminology__item {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .terminology__wrapper .terminology__link:nth-child(3n+3) .terminology__item {
+    margin-right: 0;
+  }
+
+  .terminology__wrapper {
+    margin-bottom: 34px;
+  }
+
+  .terminology__item {
     width: 380px;
     min-height: 230px;
     margin-right: 40px;
   }
 
-  .terminology__wrapper .terminology__link:nth-child(3n+3) .terminology__item {
-    margin-right: 0;
+  .terminology__title {
+    font-weight: 600;
+    margin-top: 48px;
   }
 }
