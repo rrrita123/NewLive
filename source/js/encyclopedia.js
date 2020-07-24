@@ -2,7 +2,8 @@
 
 var Mob = {
   WIDTH: 768,
-  TERMINS_PAGE: 5
+  TERMINS_PAGE: 5,
+  TOP: 360
 }
 
 var pageMobile = 1;
@@ -12,6 +13,56 @@ var terminologyElement = document.querySelector('.terminology');
 var terminologyWrapperElement = document.querySelector('.terminology__wrapper');
 var terminologyElementCollection = terminologyWrapperElement.querySelectorAll('.terminology__link')
 var btnMoreTerminology = document.querySelector('.button-main--terminology');
+var originalPosition = 0;
+
+var getOffset = function (elem) {
+  if (elem.getBoundingClientRect) {
+      // "правильный" вариант
+      return getOffsetRect(elem)
+  } else {
+      // пусть работает хоть как-то
+      return getOffsetSum(elem)
+  }
+}
+
+var getOffsetSum = function (elem) {
+  var top=0, left=0
+  while(elem) {
+      top = top + parseInt(elem.offsetTop)
+      left = left + parseInt(elem.offsetLeft)
+      elem = elem.offsetParent
+  }
+
+  return {top: top, left: left}
+}
+
+var getOffsetRect = function (elem) {
+  // (1)
+  var box = elem.getBoundingClientRect()
+
+  // (2)
+  var body = document.body
+  var docElem = document.documentElement
+
+  // (3)
+  var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop
+  var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft
+
+  // (4)
+  var clientTop = docElem.clientTop || body.clientTop || 0
+  var clientLeft = docElem.clientLeft || body.clientLeft || 0
+
+  // (5)
+  var top  = box.top +  scrollTop - clientTop
+  var left = box.left + scrollLeft - clientLeft
+
+  return { top: Math.round(top), left: Math.round(left) }
+}
+
+var getPositionY = function (elem) {
+  return getOffset(elem).top - window.innerHeight;
+}
+
 
 var filterCollection = function (letter) {
   letter = letter || 'всё';
@@ -55,6 +106,10 @@ var renderTermins = function (terminsArr) {
   terminsArr.forEach(function (element) {
     terminologyWrapperElement.appendChild(element);
   });
+
+  // перезаписываем координату блока терминов для фиксированного состояния
+  contentsElement.classList.remove('fixed');
+  originalPosition = getPositionY(contentsElement);
 }
 
 // Клик по букве в содержании
@@ -68,6 +123,9 @@ var contentsElementClickHandler = function (evt) {
       contentsElement.querySelector('.active').classList.remove('active');
     }
     evt.target.classList.add('active');
+
+    // скролл до начала списка терминов
+    window.scroll(0, getOffset(terminologyElement).top);
 
     // рендер отфильтрованных терминов по букве
     renderTermins(filterCollection(evt.target.textContent));
@@ -100,9 +158,12 @@ if (window.innerWidth < Mob.WIDTH) {
   btnMoreTerminology.classList.add('hidden');
 }
 
+
+originalPosition = getPositionY(contentsElement);
+
 window.addEventListener('scroll', function(evt) {
-  // console.log(window.scrollY);
-  if (window.scrollY > 750) {
+  console.log(terminologyWrapperElement.children.length);
+  if (window.scrollY > Mob.TOP && window.scrollY < originalPosition && terminologyWrapperElement.children.length > 2) {
     contentsElement.classList.add('fixed');
   } else {
     contentsElement.classList.remove('fixed');
