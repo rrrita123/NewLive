@@ -1,0 +1,41 @@
+.button-inner {
+  display: block;
+  border: 1px solid #5080ec;
+  box-sizing: border-box;
+  border-radius: 25px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.0125em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #5080ec;
+}
+
+.button-inner--term {
+  margin-top: 55px;
+  margin-bottom: 61px;
+  padding: 15px 0;
+  width: 249px;
+}
+
+.button-inner--term-desctop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .button-inner--term-desctop {
+    margin-top: 60px;
+    margin-bottom: 89px;
+
+    display: block;
+    padding: 15px 0;
+    width: 380px;
+  }
+
+  .button-inner--term {
+    display: none;
+  }
+}
