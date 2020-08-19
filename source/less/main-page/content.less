@@ -5,7 +5,21 @@
 
 .content--news {
   position: relative;
-  padding-bottom: 6px;
+  padding-bottom: 14px;
+}
+
+.content--acricles-list {
+  position: relative;
+  margin-top: 45px;
+}
+
+.content--acricles-list::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #f0743b;
+  top: 0;
 }
 
 @media (min-width: 768px) {
@@ -18,6 +32,9 @@
     min-height: 200px;
   }
 
+  .content--acricles-list {
+    width: 50%;
+  }
 }
 
 @media (min-width: 1280px) {
