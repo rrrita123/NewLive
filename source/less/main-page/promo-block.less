@@ -1,0 +1,90 @@
+.promo-block--prize {
+  position: relative;
+  background-color: #9ddaaf;
+  background-image: url("../img/background-promo-mobile.png");
+  background-repeat: repeat;
+  background-position: top -21px left;
+
+  padding: 30px;
+  padding-bottom: 98px;
+}
+
+.promo-block__title {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 64px;
+  width: 80%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.promo-block__link {
+  position: relative;
+
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.013em;
+  text-transform: uppercase;
+}
+
+.promo-block__link::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  height: 1px;
+  background-color: #1b2733;
+}
+
+.promo-block__img-prize {
+  position: absolute;
+  bottom: 31px;
+  right: 30px;
+}
+
+@media (min-width: 415px) {
+  .promo-block--prize {
+    background-image: url("../img/background-promo.png");
+    background-position: top right -42px;
+  }
+}
+
+@media (min-width: 768px) {
+  .promo-block--prize {
+    padding-bottom: 31px;
+  }
+
+  .promo-block__title {
+    width: 64%;
+    margin-bottom: 21px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: normal;
+  }
+
+  .promo-block__link {
+    font-size: 16px;
+  }
+
+  .promo-block__link::before {
+    bottom: 3px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .promo-block--prize {
+    background-position: top right 24px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .promo-block__title {
+    margin-top: 40px;
+    width: 75%;
+  }
+
+  .promo-block__img-prize {
+    position: static;
+  }
+}
