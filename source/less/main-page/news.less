@@ -90,10 +90,8 @@
 
   .news--big::after {
     content: "";
-    position: absolute;
-    width: 1px;
+    .border-vertical;
     height: 97%;
-    background-color: #f0743b;
     right: 0;
     top: 0;
   }
@@ -161,5 +159,9 @@
     font-size: 16px;
     line-height: 15px;
     letter-spacing: 0.013em;
+  }
+
+  .news__category--big {
+    opacity: 1;
   }
 }

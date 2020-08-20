@@ -21,7 +21,18 @@
   text-align: center;
 }
 
+.articles__img {
+  width: 100%;
+}
+
+.articles__title--strong {
+  font-weight: 600;
+}
+
 .articles__title {
+  margin-top: 14px;
+
+  font-weight: 300;
   font-size: 20px;
   line-height: 25px;
   letter-spacing: 0.0025em;
@@ -42,10 +53,47 @@
   .articles__header {
     display: flex;
     flex-direction: column;
+    width: 50%;
   }
 
   .articles--gray {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .articles__title {
+    margin-top: 16px;
+
+    font-size: 30px;
+    text-align: left;
+    order: -1;
+  }
+
+  .articles__category {
+    margin-top: 9px;
+
+    text-align: right;
+    letter-spacing: 0.013em;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .articles--gray {
+    padding-top: 61px;
+    padding-bottom: 21px;
+  }
+
+  .articles__header {
+    width: 587px;
+    padding-right: 21px;
+  }
+
+  .articles__title {
+    margin-top: 0;
+
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: 0.0025em;
   }
 }
