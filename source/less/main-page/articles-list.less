@@ -66,16 +66,24 @@
   .articles-list__item {
     padding-top: 0;
     padding-bottom: 25px;
+    padding-right: 25px;
+    width: 45%;
+  }
 
-    width: 50%;
+  .articles-list__item:nth-child(2n) {
+    padding-right: 0;
+    width: 47%;
   }
 
   .articles-list__title {
     margin-top: 0;
+    font-weight: 600;
+    margin-bottom: 0;
   }
 
   .articles-list__description {
     font-weight: 300;
+    margin-top: 0;
   }
 
   .articles-list__detail {
@@ -95,14 +103,5 @@
   .articles-list__item:nth-child(2n) {
     padding-right: 0;
     width: 46.5%;
-  }
-
-  .articles-list__title {
-    font-weight: 600;
-    margin-bottom: 0;
-  }
-
-  .articles-list__description {
-    margin-top: 0;
   }
 }
