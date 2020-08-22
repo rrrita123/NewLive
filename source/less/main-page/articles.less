@@ -54,8 +54,17 @@
   .articles__header {
     display: flex;
     flex-direction: column;
+    position: relative;
     padding-right: 21px;
     width: 40%;
+  }
+
+  .articles__header::before {
+    content: "";
+    .border-vertical;
+    height: 99%;
+    right: 0;
+    top: 0;
   }
 
   .articles--gray {
