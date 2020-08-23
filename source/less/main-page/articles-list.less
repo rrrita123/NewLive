@@ -3,6 +3,12 @@
   margin: 0;
 }
 
+.articles-list::before {
+  content: "";
+  .border-orange;
+  opacity: 0.5;
+}
+
 .articles-list__item {
   padding-top: 20px;
   list-style: none;
@@ -56,11 +62,7 @@
   }
 
   .articles-list::before {
-    content: "";
-    .border-vertical;
-    height: 92.7%;
-    left: 0;
-    top: 0;
+    display: none;
   }
 
   .articles-list__item {
