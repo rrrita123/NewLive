@@ -7,6 +7,7 @@
   content: "";
   .border-orange;
   opacity: 0.5;
+  top: 0;
 }
 
 .articles-list__item {
@@ -53,23 +54,49 @@
   margin-bottom: 10px;
 }
 
+.articles-list--green {
+  position: relative;
+  padding-top: 30px;
+}
+
+.articles-list__title--green {
+  display: inline;
+  font-weight: 600;
+}
+
+.articles-list__description--green {
+  display: inline;
+  font-weight: 300;
+}
+
+.articles-list__detail--green {
+  font-size: 16px;
+  margin-top: 42px;
+}
+
 @media (min-width: 768px) {
   .articles-list {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     padding-left: 20px;
+    align-content: flex-start;
   }
 
-  .articles-list::before {
-    display: none;
-  }
+  // .articles-list::before {
+  //   display: none;
+  // }
 
   .articles-list__item {
     padding-top: 0;
-    padding-bottom: 25px;
+    padding-bottom: 41px;
     padding-right: 25px;
     width: 45%;
+  }
+
+  .articles-list__item .articles-list__link {
+    display: flex;
+    flex-direction: column;
   }
 
   .articles-list__item:nth-child(2n) {
@@ -84,15 +111,39 @@
   }
 
   .articles-list__description {
+    flex-grow: 1;
     font-weight: 300;
     margin-top: 0;
   }
 
   .articles-list__detail {
+    align-self: flex-start;
     margin-top: 7px;
-
+    margin-bottom: 0;
     font-size: 16px;
     letter-spacing: 0.005em;
+  }
+
+  .articles-list--green {
+    width: 60%;
+    padding-left: 19px;
+    padding-top: 0;
+  }
+
+  .articles-list__item--green {
+    display: flex;
+  }
+
+  .articles-list__description--green {
+    margin-bottom: 13px;
+  }
+
+  .articles-list::before {
+    content: "";
+    .border-vertical;
+    height: 97%;
+    left: 0;
+    top: 0;
   }
 }
 
@@ -105,5 +156,23 @@
   .articles-list__item:nth-child(2n) {
     padding-right: 0;
     width: 46.5%;
+  }
+
+  .articles__title--green {
+    padding-top: 0;
+  }
+
+  .articles-list--green {
+    margin-bottom: 23px;
+    width: 50%;
+  }
+
+  .articles-list__item--green {
+    padding-right: 49px;
+    min-height: 204px;
+  }
+
+  .articles-list::before {
+    height: 92.5%;
   }
 }
