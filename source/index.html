@@ -6,7 +6,7 @@
     <title>Новая жизнь — сайт помощи онкобольным, вместе против рака молочной железы у женщин</title>
   </head>
   <body class="page page--fixed-header">
-    <%=require('html-loader!./header.html')%>
+    <%=require('html-loader?{"attributes":{"list":[{"tag":"img","attribute":"data-src","type":"src"}]}}!./header.html')%>
     <main>
       <section class="promo-block promo-block--prize">
         <div class="container container--promo">
@@ -293,6 +293,6 @@
     </section>
 
     <script src="js/popup-mailing.js"></script> -->
-    <%=require('html-loader!./footer.html')%>
+    <%=require('html-loader?{"attributes":{"list":[{"tag":"img","attribute":"data-src","type":"src"}]}}!./footer.html')%>
   </body>
 </html>
