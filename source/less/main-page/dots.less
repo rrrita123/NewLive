@@ -1,6 +1,10 @@
 .dots {
-  margin-top: 31px;
+
   text-align: center;
+}
+
+.dots--indent {
+  margin-top: 31px;
 }
 
 .dots__item {
@@ -25,8 +29,21 @@
   background-color: #ffffff;
 }
 
+.dots__item--active-specialist {
+  background-color: #9dcfac;;
+}
+
+.dots--specialist {
+  display: none;
+}
+
 @media (min-width: 768px) {
-  .dots {
+  .dots--indent {
     display: none;
   }
+
+  .dots--specialist {
+    display: block;
+  }
+
 }

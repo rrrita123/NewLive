@@ -3,11 +3,21 @@
   margin-bottom: 44px;
 }
 
+.news-small__list {
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 768px) {
   .news-small {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 0;
+  }
+
+  .news-small__list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -17,4 +27,9 @@
     margin-right: 0;
     margin-top: 37px;
   }
+
+  // .news-small__list .news--small-indent:first-child,
+  // .news-small__list .news--small-indent:nth-child(3n+1) {
+  //   flex-flow: 0;
+  // }
 }

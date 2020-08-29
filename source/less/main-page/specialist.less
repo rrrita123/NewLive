@@ -1,0 +1,224 @@
+.specialist {
+  padding-top: 81px;
+  padding-bottom: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #f4f2ef;
+  background-image: url("../../img/background-doctor-mobile.png");
+  background-repeat: no-repeat;
+}
+
+.specialist__list {
+  padding: 0;
+  margin: 0;
+}
+
+.specialist__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.specialist__img--size {
+  margin-bottom: 60px;
+  padding-bottom: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 45px;
+  min-height: 680px;
+}
+
+.specialist__img {
+  object-fit: none;
+}
+
+.specialist__name {
+  align-self: flex-start;
+  width: 69%;
+  letter-spacing: 0.005em;
+  overflow-wrap: normal;
+  color: #000000;
+}
+
+.specialist__doctor {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  color: #000000;
+  overflow-wrap: normal;
+}
+
+.specialist__description {
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+
+.specialist__details {
+  position: relative;
+
+  letter-spacing: 0.005em;
+  color: #ff7e33;
+}
+
+.specialist__title {
+  margin: 0 auto;
+  margin-bottom: 48px;
+
+  width: 50%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.0025em;
+  text-transform: uppercase;
+}
+
+.specialist__img--indent {
+  margin-right: 24px;
+}
+
+.specialist__name--indent {
+  margin-top: 12px;
+  margin-bottom: 9px;
+}
+
+.specialist__doctor--indent {
+  margin-top: 9px;
+}
+
+.specialist__description--indent {
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.specialist__details--indent {
+  margin-top: 8px;
+}
+
+.specialist__link:hover .specialist__details::after {
+  content: "";
+  .hover-underline-orange;
+}
+
+.specialist__slider {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .specialist {
+    position: relative;
+    min-height: 1000px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .specialist__list {
+    display: flex;
+    position: absolute;
+    left: -420px;
+  }
+
+  .specialist__img--size {
+    width: 380px;
+    margin-right: 40px;
+  }
+
+  .specialist__img--size:last-child {
+    margin-right: 0;
+  }
+
+  .specialist__title {
+    font-size: 33px;
+    line-height: 40px;
+  }
+
+  .specialist__item {
+    min-height: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 50px;
+  }
+
+  .specialist__img--indent {
+    margin-right: 19px;
+  }
+
+  .specialist__name {
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+  }
+
+  .specialist__name--indent {
+    margin-top: 18px;
+  }
+
+  .specialist__doctor {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .specialist__doctor--indent {
+    margin-bottom: 0;
+  }
+
+  .specialist__description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .specialist__description--indent {
+    margin-top: 7px;
+    margin-bottom: 3px;
+  }
+
+  .specialist__details {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .specialist__slider {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #aedfbb;
+    border: none;
+    background-image: url("../../img/arrow.png");
+    background-repeat: no-repeat;
+    background-position: left 27px top 39px;
+    border-radius: 50%;
+  }
+
+  .specialist__slider--left {
+    position: absolute;
+    z-index: 1;
+    top: 246px;
+    left: -74px;
+  }
+
+  .specialist__slider--rigth {
+    transform: rotate(180deg);
+    position: absolute;
+    right: -71px;
+    top: 246px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .specialist {
+    min-height: 1152px;
+    padding-top: 150px;
+    padding-bottom: 78px;
+  }
+
+  .specialist__title {
+    margin-bottom: 111px;
+  }
+
+}
