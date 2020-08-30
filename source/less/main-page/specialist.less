@@ -5,12 +5,16 @@
   padding-right: 15px;
   background-color: #f4f2ef;
   background-image: url("../../img/background-doctor-mobile.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 .specialist__list {
   padding: 0;
   margin: 0;
+}
+
+.specialist__list > div {
+  display: none;
 }
 
 .specialist__item {
@@ -119,15 +123,17 @@
   }
 
   .specialist__list {
-    display: flex;
-    position: absolute;
-    left: -420px;
+    // display: flex;
+    // position: absolute;
+    // left: -420px;
   }
 
   .specialist__img--size {
     width: 380px;
-    margin-right: 40px;
+    // margin: 0 20px;
   }
+
+
 
   .specialist__img--size:last-child {
     margin-right: 0;
@@ -193,28 +199,41 @@
     background-repeat: no-repeat;
     background-position: left 27px top 39px;
     border-radius: 50%;
+
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    bottom: 310px;
+    box-shadow: 0px 1px 4px rgba(55, 104, 68, 0.5);
+    outline: none;
+  }
+
+  .specialist__slider:hover {
+    background-color: #98ddab;
+  }
+
+  .specialist__nav--wrapper {
+    width: 1280px;
+    position: relative;
+    margin: 0 auto;
   }
 
   .specialist__slider--left {
-    position: absolute;
-    z-index: 1;
-    top: 246px;
-    left: -74px;
+    left: -11px;
   }
 
   .specialist__slider--rigth {
     transform: rotate(180deg);
-    position: absolute;
-    right: -71px;
-    top: 246px;
+    right: -11px;
   }
 }
 
 @media (min-width: 1280px) {
   .specialist {
+    padding: 150px 0 78px;
     min-height: 1152px;
-    padding-top: 150px;
-    padding-bottom: 78px;
+    background-image: url('../../img/specialist-bg-desctop.jpg');
+    background-size: cover;
   }
 
   .specialist__title {
