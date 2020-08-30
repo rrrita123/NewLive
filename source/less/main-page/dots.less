@@ -15,7 +15,7 @@
 
   background-color: #5080ec;
   border: none;
-  border-radius: 100%;
+  border-radius: 50%;
 
   cursor: pointer;
 }
@@ -24,17 +24,23 @@
   margin-right: 0;
 }
 
-.dots__item--active {
+.dots__item--active,
+.dots__item.tns-nav-active {
   border: 1px solid #5080ec;
   background-color: #ffffff;
-}
-
-.dots__item--active-specialist {
-  background-color: #9dcfac;;
+  position: relative;
+  top: 1px;
 }
 
 .dots--specialist {
   display: none;
+}
+
+.dots__item--active-specialist,
+.dots--specialist .dots__item.tns-nav-active {
+  background-color: #9dcfac;
+  border: 0;
+  top: 0;
 }
 
 @media (min-width: 768px) {

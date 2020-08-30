@@ -50,5 +50,7 @@
   "engines": {
     "node": "8.16"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tiny-slider": "2.9.3"
+  }
 }
