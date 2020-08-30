@@ -1,5 +1,5 @@
 .promo-block--prize {
-  position: relative;
+  // position: relative;
   background-color: #9ddaaf;
   background-image: url("../../img/background-promo-mobile.png");
   background-repeat: repeat;
@@ -39,8 +39,8 @@
 
 .promo-block__img-prize {
   position: absolute;
-  bottom: 31px;
-  right: 30px;
+  bottom: -144px;
+  right: -30px;
 }
 
 @media (min-width: 415px) {
@@ -70,13 +70,18 @@
   .promo-block__link::before {
     bottom: 3px;
   }
+
+  .promo-block__img-prize {
+    bottom: -97px;
+    right: -85px;
+  }
 }
 
 @media (min-width: 1280px) {
   .promo-block--prize {
     background-position: top right 24px;
     padding-top: 10px;
-    padding-bottom: 15px;
+    padding-bottom: 31px;
   }
 
   .promo-block__title {
@@ -84,7 +89,8 @@
     width: 75%;
   }
 
-  .promo-block__img-prize {
-    position: static;
-  }
+  // .promo-block__img-prize {
+  //   bottom: -97px;
+  //   right: -85px;
+  // }
 }

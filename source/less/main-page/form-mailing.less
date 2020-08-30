@@ -1,0 +1,41 @@
+.form-mailing__email {
+  position: relative;
+  width: 100%;
+
+  border: 2px solid #ff8516;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.form-mailing__email--indent {
+  padding: 13px 31px;
+  margin-bottom: 15px;
+}
+
+.form-mailing__email::placeholder {
+  text-transform: uppercase;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.0125em;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .form-mailing {
+    display: flex;
+  }
+
+  .form-mailing__email--indent {
+    margin: 0;
+    margin-right: 20px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .form-mailing__email--indent {
+    width: 380px;
+  }
+}
