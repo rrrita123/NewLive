@@ -1,0 +1,132 @@
+.newsletter {
+  padding-bottom: 140px;
+  padding-top: 63px;
+  position: relative;
+}
+
+.newsletter::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-image: url("../../img/background-newsletter-mobile_1x.png");
+  background-repeat: repeat;
+  bottom: 0;
+  left: 0;
+}
+
+.newsletter__title {
+  position: relative;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.0015em;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.newsletter__title::after {
+  content: "";
+  .border-orange;
+  opacity: 0.5;
+  height: 2px;
+  bottom: -11px;
+  left: 0;
+}
+
+.newsletter__discription {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.005em;
+}
+
+.newsletter__discription--indent {
+  margin-top: 36px;
+  margin-bottom: 30px;
+}
+
+.newsletter__link {
+  position: relative;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.0125em;
+  text-transform: uppercase;
+
+  color: #ff7e33;
+}
+
+.newsletter__link::after {
+  content: "";
+  .hover-underline-orange;
+}
+
+.newsletter__link:hover {
+  color: #5080ec;
+}
+
+.newsletter__link:hover::after {
+  background-color: #5080ec;
+}
+
+.newsletter__mailing {
+  margin-bottom: 55px;
+}
+
+.newsletter__discription--social {
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 26px;
+}
+
+.newsletter__link--indent {
+  margin-right: 28px;
+}
+
+@media (min-width: 768px) {
+  .newsletter__title::after {
+    display: none;
+  }
+
+  .newsletter__mailing {
+    position: relative;
+    margin-bottom: 0;
+    padding-right: 20px;
+  }
+
+  .newsletter__mailing::after {
+    content: "";
+    .border-vertical;
+    height: 100%;
+    opacity: 1;
+    top: 0;
+    right: 0;
+  }
+
+  .newsletter__mailing,
+  .newsletter__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .newsletter__social {
+    padding-left: 20px;
+  }
+
+  .newsletter__discription--indent {
+    flex-grow: 1;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .newsletter {
+    padding-top: 98px;
+    padding-bottom: 181px;
+  }
+}
