@@ -15,22 +15,23 @@
       <span class="hamburger__text">Меню</span>
     </div>
     <div class="search">
-      <div class="search__btn-open" role="button" tabindex="1">
-        <img width="38" height="38" src="img/search.svg" alt="">
-      </div>
+
       <form class="search__form" role="search" id="searchform" method="get" action="/search/">
-        <input class="search__input-text" type="text" value="" name="q" placeholder="введите запрос" kl_vkbd_parsed="true">
-        <input class="search__input-submit" type="submit" value="искать" kl_vkbd_parsed="true">
-        <div class="search__btn-close">
+        <input class="search__input-text" type="text" value="" name="q" placeholder="поиск" kl_vkbd_parsed="true">
+        <!-- <input class="search__input-submit" type="submit" value="искать" kl_vkbd_parsed="true"> -->
+        <button class="search__btn-open" role="submit" tabindex="1">
+          <img width="38" height="38" src="img/search.svg" alt="">
+        </button>
+        <!-- <div class="search__btn-close">
             <div></div>
             <div></div>
-        </div>
+        </div> -->
       </form>
     </div>
     <nav class="menu">
       <ul class="menu__list content--gap menu--container">
         <li class="menu__item">
-          <a class="menu__name menu__name--section" href="#">Мы помогаем</a>
+          <span class="menu__name menu__name--section">Мы помогаем</span>
           <ul class="menu__list menu__list--section">
             <li class="menu__item menu__item--element"><a href="#">Юридическая помощь</a></li>
             <li class="menu__item menu__item--element"><a href="#">Рекомендации онкопсихолога</a></li>
@@ -38,7 +39,7 @@
           </ul>
         </li>
         <li class="menu__item">
-          <a class="menu__name menu__name--section" href="#">Об онкологии</a>
+          <span class="menu__name menu__name--section">Об онкологии</span>
           <ul class="menu__list menu__list--section">
             <li class="menu__item menu__item--element"><a href="#">Профилактика</a></li>
             <li class="menu__item menu__item--element"><a href="#">Диагностика и лечение</a></li>
@@ -46,7 +47,7 @@
           </ul>
         </li>
         <li class="menu__item">
-          <a class="menu__name menu__name--section" href="#">Личный опыт</a>
+          <span class="menu__name menu__name--section">Личный опыт</span>
           <ul class="menu__list menu__list--section">
             <li class="menu__item menu__item--element"><a href="#">Истории женщин</a></li>
             <li class="menu__item menu__item--element"><a href="#">Ваши фотографии</a></li>
@@ -54,7 +55,7 @@
           </ul>
         </li>
         <li class="menu__item">
-          <a class="menu__name menu__name--section" href="#">О нас</a>
+          <span class="menu__name menu__name--section">О нас</span>
           <ul class="menu__list menu__list--section">
             <li class="menu__item menu__item--element"><a href="#">Что мы делаем</a></li>
             <li class="menu__item menu__item--element"><a href="#">События</a></li>

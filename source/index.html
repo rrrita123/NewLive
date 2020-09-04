@@ -6,14 +6,14 @@
     <title>Новая жизнь — сайт помощи онкобольным, вместе против рака молочной железы у женщин</title>
   </head>
   <body class="page page--fixed-header">
-    <%=require('html-loader?{"attributes":{"list":[{"tag":"img","attribute":"data-src","type":"src"}]}}!./header.html')%>
+    <%=require('html-loader?{"minimize":false,"attributes":{"list":[{"tag":"img","attribute":"data-src","type":"src"}]}}!./header.html')%>
     <main>
       <section class="promo-block promo-block--prize">
         <div class="container container--promo">
-          <div class="wrapper wrapper--text">
+          <a href="#" class="wrapper wrapper--text promo-block__prema-link">
             <h2 class="promo-block__title">Проект «Новая жизнь» — лауреат премии «Будем жить!»</h2>
-            <a class="promo-block__link" href="#">подробнее</a>
-          </div>
+            <span class="promo-block__link">подробнее</span>
+          </a>
           <picture class="promo-block__img">
             <source media="(min-width: 768px)" srcset="img/nagrada_1x.png 1x, img/nagrada_2x.png 2x">
             <img class="promo-block__img-prize" src="img/nagrada-mobile_1x.png" srcset="img/nagrada-mobile_2x.png 2x" alt="Примия «Будем жить!»">
@@ -62,36 +62,44 @@
           </a>
 
           <div class="content content--index content--acricles-list">
-            <ul class="articles-list">
-              <li class="articles-list__item">
+            <ul class="articles-list articles-list--green articles-list--gray">
+              <li class="articles-list__item articles-list__item--green">
                 <a class="articles-list__link" href="#">
-                  <p class="articles-list__title">«Очень верю, что Промисан мне поможет!»</p>
-                  <p class="articles-list__description">Меня зовут Наталья. В&nbsp;2013 году у&nbsp;меня нашли рак молочной железы&nbsp;&mdash; люминальный гормонозависимый рак. сделали операцию</p>
-                  <p class="articles-list__detail">Подробнее</p>
+                  <div>
+                    <p class="articles-list__title articles-list__title--green">«Очень верю, что Промисан мне поможет!»</p>
+                    <p class="articles-list__description articles-list__description--green">Меня зовут Наталья. В&nbsp;2013 году у&nbsp;меня нашли рак молочной железы&nbsp;&mdash; люминальный гормонозависимый рак. сделали операцию</p>
+                  </div>
+                  <p class="articles-list__detail articles-list__detail--green">Подробнее</p>
                 </a>
               </li>
 
-              <li class="articles-list__item">
+              <li class="articles-list__item articles-list__item--green">
                 <a class="articles-list__link" href="#">
-                  <p class="articles-list__title">«Верю — Промисан поможет мне избежать рецидива»</p>
-                  <p class="articles-list__description">Меня зовут Ольга. В 2015 году я сделала операцию — мастэктомию с одномоментной пластикой в ФГБУ «НМИЦ онкологии им. Н. Н. Блохина» мне поставили диагноз рак</p>
-                  <p class="articles-list__detail">Подробнее</p>
+                  <div>
+                    <p class="articles-list__title articles-list__title--green">«Верю — Промисан поможет мне избежать рецидива»</p>
+                    <p class="articles-list__description articles-list__description--green">Меня зовут Ольга. В 2015 году я сделала операцию — мастэктомию с одномоментной пластикой в ФГБУ «НМИЦ онкологии им. Н. Н. Блохина» мне поставили диагноз рак</p>
+                  </div>
+                  <p class="articles-list__detail articles-list__detail--green">Подробнее</p>
                 </a>
               </li>
 
-              <li class="articles-list__item">
+              <li class="articles-list__item articles-list__item--green">
                 <a class="articles-list__link" href="#">
-                  <p class="articles-list__title"> «...ведь так хочется, чтобы ремиссия была пожизненной!»</p>
-                  <p class="articles-list__description">Меня зовут Царенко Лариса Алексеевна. 12 лет назад у меня нашли рак молочной железы, сделали операцию гормонозависимый рак</p>
-                  <p class="articles-list__detail">Подробнее</p>
+                  <div>
+                    <p class="articles-list__title articles-list__title--green"> «...ведь так хочется, чтобы ремиссия была пожизненной!»</p>
+                    <p class="articles-list__description articles-list__description--green">Меня зовут Царенко Лариса Алексеевна. 12 лет назад у меня нашли рак молочной железы, сделали операцию гормонозависимый рак</p>
+                  </div>
+                  <p class="articles-list__detail articles-list__detail--green">Подробнее</p>
                 </a>
               </li>
 
-              <li class="articles-list__item">
+              <li class="articles-list__item articles-list__item--green">
                 <a class="articles-list__link" href="#">
-                  <p class="articles-list__title">«Я уверена в отличном результате и, конечно, очень хочется стойкой ремиссии»</p>
-                  <p class="articles-list__description">Меня зовут Алла. В 2015 году мне поставили диагноз рак молочной железы и сразу была сделана операция мастэктомию с одномоментной</p>
-                  <p class="articles-list__detail">Подробнее</p>
+                  <div>
+                    <p class="articles-list__title articles-list__title--green">«Я уверена в отличном результате и, конечно, очень хочется стойкой ремиссии»</p>
+                    <p class="articles-list__description articles-list__description--green">Меня зовут Алла. В 2015 году мне поставили диагноз рак молочной железы и сразу была сделана операция мастэктомию с одномоментной</p>
+                  </div>
+                  <p class="articles-list__detail articles-list__detail--green">Подробнее</p>
                 </a>
               </li>
             </ul>
@@ -351,7 +359,7 @@
 
 
       <section class="specialist">
-        <h2 class="specialist__title">наши специалисты</h2>
+        <h2 class="specialist__title">СПЕЦИАЛИСТЫ «НОВОЙ ЖИЗНИ»</h2>
         <div class="container wrapper wrapper--secial-list">
 
           <ul class="specialist__list">
@@ -359,7 +367,7 @@
               <a href="#" class="specialist__link wrapper wrapper--specialist">
                 <img class="specialist__img specialist__img--indent" src="img/specialist-ivanova_1x.jpg" width="120" height="130" alt="Специалист юрист">
                 <div class="wrapper--specialist-name">
-                  <p class="specialist__name specialist__name--indent">1Троик Евгения Борисовна</p>
+                  <p class="specialist__name specialist__name--indent">Троик Евгения Борисовна</p>
                   <p class="specialist__doctor specialist__doctor--indent">гинеколог- эндокринолог</p>
                 </div>
                 <p class="specialist__description specialist__description--indent">Бесплатно консультирует в рамках проекта «Новая жизнь» . Является юристом Ассоциации онкологических пациентов «Здравствуй!». Консультирует пациентов с онкологическим заболеванием и родственников пациентов по вопросам получения медицинской помощи и защиты прав.</p>
@@ -372,7 +380,7 @@
               <a href="#" class="specialist__link wrapper wrapper--specialist">
                 <img class="specialist__img specialist__img--indent" src="img/specialist-byksha-mobile_1x.jpg" width="120" height="130" alt="Специалист хирург-онкопсихолог, врач-психотерапевт">
                 <div class="wrapper--specialist-name">
-                  <p class="specialist__name specialist__name--indent">2Аверкова Екатерина Григорьевна</p>
+                  <p class="specialist__name specialist__name--indent">Аверкова Екатерина Григорьевна</p>
                   <p class="specialist__doctor specialist__doctor--indent">хирург&nbsp;-онкопсихолог, врач&nbsp;-&nbsp;психотерапевт</p>
                 </div>
                 <p class="specialist__description specialist__description--indent">Оказывает психологическую и психотерапевтическую помощь онкопациентам и их родственникам для формирования адекватной картины заболевания, разработки моделей поведения и плана образа жизни. Екатерина действующий член международной психо-онкологической ассоциации.</p>
@@ -385,7 +393,7 @@
               <a href="#" class="specialist__link wrapper wrapper--specialist">
                 <img class="specialist__img specialist__img--indent" src="img/specialist-chibakova-mobile_1x.jpg" width="120" height="130" alt="Специалист гинеколог- эндокринолог">
                 <div class="wrapper--specialist-name">
-                  <p class="specialist__name specialist__name--indent">3Троик Евгения Борисовна</p>
+                  <p class="specialist__name specialist__name--indent">Троик Евгения Борисовна</p>
                   <p class="specialist__doctor specialist__doctor--indent">гинеколог- эндокринолог</p>
                 </div>
                 <p class="specialist__description specialist__description--indent">Консультирует по вопросам скрининга—первичного выявления опухолей репродуктивной системы женщин, при отсутствии проявлений заболевания и по вопросам гинекологической эндокринологии — диагностика, лечение и профилактика заболеваний, вызванных изменением гормонального фона.</p>
@@ -398,7 +406,7 @@
               <a href="#" class="specialist__link wrapper wrapper--specialist">
                 <img class="specialist__img specialist__img--indent" src="img/specialist-byksha-mobile_1x.jpg" width="120" height="130" alt="Специалист медицинский физик">
                 <div class="wrapper--specialist-name">
-                  <p class="specialist__name specialist__name--indent">4Букша Анна Юрьевна</p>
+                  <p class="specialist__name specialist__name--indent">Букша Анна Юрьевна</p>
                   <p class="specialist__doctor specialist__doctor--indent">медицинский физик</p>
                 </div>
                 <p class="specialist__description specialist__description--indent">Если пациенту была назначена лучевая терапия и есть вопросы касательно назначенного лечения лучами, Анна Юрьевна поможет ответить на волнующие вопросы, учитывая диагноз и возможности центра, а также оборудования, на котором будет лечиться пациент. Обеспечивает точность при облучении.</p>
@@ -411,7 +419,7 @@
               <a href="#" class="specialist__link wrapper wrapper--specialist">
                 <img class="specialist__img specialist__img--indent" src="img/specialist-byrchakov-mobile_1x.jpg" width="120" height="130" alt="Специалист медицинский физик">
                 <div class="wrapper--specialist-name">
-                <p class="specialist__name specialist__name--indent">5Букша Анна Юрьевна</p>
+                <p class="specialist__name specialist__name--indent">Букша Анна Юрьевна</p>
                 <p class="specialist__doctor specialist__doctor--indent">медицинский физик</p>
                 </div>
                 <p class="specialist__description specialist__description--indent">Если пациенту была назначена лучевая терапия и есть вопросы касательно назначенного лечения лучами, Анна Юрьевна поможет ответить на волнующие вопросы, учитывая диагноз и возможности центра, а также оборудования, на котором будет лечиться пациент. Обеспечивает точность при облучении.</p>
@@ -442,8 +450,9 @@
         <div class="container">
           <div class="content content--index content--tablet container--newsletter">
             <div class="newsletter__mailing">
-              <h2 class="newsletter__title">Рассылка «новая жизни»</h2>
-              <p class="newsletter__discription newsletter__discription--indent">Мы аккуратно собираем анонсы встреч, истории наших участниц, интервью, полезные материалы в рассылку и отправляем ее один раз в две недели</p>
+              <h2 class="newsletter__title">ПИСЬМА ОТ «НОВОЙ ЖИЗНИ»</h2>
+              <p class="newsletter__discription newsletter__discription--indent">Мы&nbsp;аккуратно собираем анонсы встреч, истории наших участниц, интервью, полезные материалы в&nbsp;рассылку и&nbsp;отправляем
+                ее&nbsp;один раз в&nbsp;две недели.</p>
               <form class="form-mailing" action="#" method="post">
                 <input class="form-mailing__email form-mailing__email--indent error-mail" type="email" name="email" placeholder="ваш e-mail">
                 <button class="button-main button-main--indent button-main--newsletter" type="submit">подписаться</button>
@@ -452,10 +461,12 @@
 
             <div class="newsletter__social">
               <h2 class="newsletter__title">«новая жизнь» в соцсетях</h2>
-              <p class="newsletter__discription newsletter__discription--indent newsletter__discription--social">Каждой из нас важно чувствовать поддержку. Подпишитесь на аккаунты «Новой Жизни» в соцсетях.Возможно, вам или кому-то из знакомых наши статьи помогут.</p>
+              <p class="newsletter__discription newsletter__discription--indent newsletter__discription--social">Каждой из&nbsp;нас важно чувствовать поддержку.
+                Подпишитесь на&nbsp;аккаунты &laquo;Новой Жизни&raquo;.
+                Возможно, вам или кому-то из&nbsp;знакомых наши статьи помогут.</p>
               <div class="wrapper wrapper--social">
-              <a href="#" class="newsletter__link newsletter__link--indent">Мы в инстаграм</a>
-              <a href="#" class="newsletter__link">МЫ в яндекс.дзен</a>
+              <a href="#" class="newsletter__link newsletter__link--indent">МЫ В инстаграме</a>
+              <a href="#" class="newsletter__link">КАНАЛ В яндекс.дзен</a>
               </div>
             </div>
           </div>
@@ -532,6 +543,6 @@
     </section>
 
     <script src="js/popup-mailing.js"></script> -->
-    <%=require('html-loader?{"attributes":{"list":[{"tag":"img","attribute":"data-src","type":"src"}]}}!./footer.html')%>
+    <%=require('html-loader?{"minimize":false,"attributes":{"list":[{"tag":"img","attribute":"data-src","type":"src"}]}}!./footer.html')%>
   </body>
 </html>

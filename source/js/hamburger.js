@@ -1,6 +1,7 @@
 const bodyElement = document.querySelector(`body`);
 const headerElement = bodyElement.querySelector(`.header`);
 const headerTitleElement = bodyElement.querySelector(`.header__title`);
+const headerLogoElement = headerElement.querySelector(`.header__logo`);
 const hamburgerElement = headerElement.querySelector(`.hamburger`);
 const searchElement = headerElement.querySelector(`.search`);
 const searchBtnOpen = searchElement.querySelector(`.search__btn-open`);
@@ -20,6 +21,7 @@ const toggleClass = (element, cls) => {
 
 const hamburgerClickHandler = function () {
   toggleClass(headerElement, `header--menu-open`);
+  headerElement.classList.remove(`header--visibility`);
 
   if (searchElement.classList.contains(`search--open`)) {
     toggleClass(searchElement, `search--open`);
@@ -27,25 +29,37 @@ const hamburgerClickHandler = function () {
   if (window.innerWidth > 1280) {
     toggleClass(headerTitleElement, `opacity`);
   }
+  if (window.innerWidth < 768) {
+    toggleClass(searchElement, `search--mobile-show`);
+  }
 };
 
 hamburgerElement.addEventListener(`click`, hamburgerClickHandler);
 
-searchBtnOpen.addEventListener(`click`, () => {
-  toggleClass(searchElement, `search--open`);
-});
+// searchBtnOpen.addEventListener(`click`, () => {
+//   toggleClass(searchElement, `search--open`);
+// });
 
 window.addEventListener(`scroll`, () => {
+  let opacity = 0;
+
+  if (window.scrollY <= 0) {
+    opacity = 1;
+  } else if (window.scrollY <= minHeight) {
+    opacity = 1 - window.scrollY / minHeight;
+  }
+
+  headerTitleElement.style.opacity = opacity;
+
+  if (opacity === 0) {
+    headerElement.classList.add(`header--visibility`);
+  } else {
+    headerElement.classList.remove(`header--visibility`);
+  }
+
+
   if (window.innerWidth < 768) {
-    let opacity = 0;
 
-    if (window.scrollY <= 0) {
-      opacity = 1;
-    } else if (window.scrollY <= minHeight) {
-      opacity = 1 - window.scrollY / minHeight;
-    }
-
-    headerTitleElement.style.opacity = opacity;
 
     if (opacity === 0) {
       headerElement.classList.add(`header--shadow`);
@@ -64,6 +78,8 @@ window.addEventListener(`scroll`, () => {
       headerElement.style.height = (115 - 65) + `px`;
     }
   } else {
+    headerLogoElement.style.opacity = opacity;
+
     if (window.scrollY > 0) {
       headerElement.classList.add(`header--shadow`);
     } else {
