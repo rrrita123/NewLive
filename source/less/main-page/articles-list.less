@@ -19,6 +19,10 @@
   display: block;
 }
 
+.articles-list__link:hover .articles-list__title {
+  color: #ff7e33;
+}
+
 .articles-list__title,
 .articles-list__description {
   letter-spacing: 0.005em;
@@ -92,6 +96,14 @@
     padding-bottom: 41px;
     padding-right: 25px;
     width: 45%;
+  }
+
+  .articles-list.articles-list--gray {
+    width: 100%;
+  }
+
+  .articles-list--gray .articles-list__item {
+    padding-bottom: 33px;
   }
 
   .articles-list__item .articles-list__link {
@@ -178,5 +190,9 @@
 
   .articles-list::before {
     height: 92.5%;
+  }
+
+  .articles-list.articles-list--gray::before {
+    height: 94.5%;
   }
 }
