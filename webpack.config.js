@@ -32,7 +32,7 @@ module.exports = {
   mode: 'development',
   entry: PATH.src + 'index.js',
   output: {
-    filename: 'bundle-[hash].js',
+    filename: 'bundle.js',
     path: path.join(__dirname, PATH.build)
   },
   devtool: isDev ? 'source-map' : '',
@@ -51,7 +51,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style-[hash].css',
+      filename: 'style.css',
     }),
     new CopyWebpackPlugin({
       patterns: [
